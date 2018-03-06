@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codepath.flickster.MovieDetailsActivity" android:background="@android:color/black">
+
+    <fragment
+        android:id="@+id/youtubeFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.google.android.youtube.player.YouTubePlayerFragment">
+    </fragment>
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/youtubeFragment"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        tools:text="title" />
+
+    <TextView
+        android:paddingLeft="10dp"
+        android:layout_below="@id/tv_title"
+        android:id="@+id/tv_title_popularity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:text="Popularity:"/>
+
+    <TextView
+        android:textColor="@android:color/white"
+        android:layout_below="@id/tv_title"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@id/tv_title_popularity"
+        android:id="@+id/tv_popularity"
+        tools:text="popularity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:paddingLeft="10dp"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vote Average:"
+        android:id="@+id/tv_title_vote"
+        android:layout_below="@id/tv_title_popularity"/>
+
+    <TextView
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@id/tv_title_vote"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/tv_popularity"
+        android:id="@+id/tv_vote_average"
+        tools:text="vote average"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:paddingLeft="10dp"
+        android:text="Release Date:"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/tv_title_vote"
+        android:id="@+id/tv_title_releasedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@id/tv_title_releasedate"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/tv_vote_average"
+        android:id="@+id/tv_release_date"
+        tools:text="release date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
